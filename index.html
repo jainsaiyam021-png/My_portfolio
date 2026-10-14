@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiyam Jain | Student Hub</title>
+    <link rel="stylesheet" href="saiyam-styles.css">
+</head>
+<body>
+
+    <!-- App Shell Layout -->
+    <div class="app-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <h2>PortalX</h2>
+                <span class="version">v2.4</span>
+            </div>
+            <nav class="side-nav">
+                <a href="#profile" class="active">Profile</a>
+                <a href="#skills">Skills Matrix</a>
+                <a href="#schedule">Timetable</a>
+                <a href="#register">Course Enrolment</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>Scaler School of Tech</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Top Header Banner -->
+            <header class="top-banner">
+                <h1>Student Dashboard</h1>
+                <p>Welcome back, <span class="highlight-cyan">Saiyam</span></p>
+            </header>
+
+            <!-- Profile Card -->
+            <section id="profile" class="cyber-card">
+                <div class="card-header">
+                    <h2>Student Profile</h2>
+                    <span class="cyber-badge">Verified Student</span>
+                </div>
+                <table>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Full Name</td>
+                        <td><span id="student-name">Saiyam Jain</span></td>
+                    </tr>
+                    <tr>
+                        <td>Student ID</td>
+                        <td><code>.26bcs10794</code></td>
+                    </tr>
+                    <tr>
+                        <td>Program</td>
+                        <td><span class="highlight-purple">Computer Science & AI</span></td>
+                    </tr>
+                    <tr>
+                        <td>Academic Year</td>
+                        <td>1st Year Undergraduate</td>
+                    </tr>
+                    <tr>
+                        <td>Institutional Email</td>
+                        <td>saiyam.26bcs10794@sst.scaler.com</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Skills Matrix -->
+            <section id="skills" class="cyber-card">
+                <div class="card-header">
+                    <h2>Skills Matrix</h2>
+                </div>
+                <ul class="neon-list">
+                    <li>Advanced Java & OOP</li>
+                    <li>Full-Stack Web Architectures</li>
+                    <li>Python Scripting</li>
+                    <li>Version Control (Git)</li>
+                    <li>Data Structures & Algorithms</li>
+                </ul>
+            </section>
+
+            <!-- Timetable Section -->
+            <section id="schedule" class="cyber-card">
+                <div class="card-header">
+                    <h2>Weekly Timetable</h2>
+                </div>
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>09:00 AM</th>
+                        <th>11:00 AM</th>
+                        <th>02:00 PM</th>
+                    </tr>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Data Structures</td>
+                        <td>Linear Algebra</td>
+                        <td>Java Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Web Engineering</td>
+                        <td>DBMS Concepts</td>
+                        <td>AI Foundations</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Algorithm Design</td>
+                        <td>Discrete Math</td>
+                        <td>Systems Programming</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Database Arch</td>
+                        <td>Spring Boot</td>
+                        <td>Hackathon Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Applied AI</td>
+                        <td>UI/UX Design</td>
+                        <td>Tech Seminar</td>
+                    </tr>
+                </table>
+            </section>
+
+            <!-- Registration Form Section -->
+            <section id="register" class="cyber-card">
+                <div class="card-header">
+                    <h2>Course Enrolment Form</h2>
+                </div>
+                <form>
+                    <fieldset class="cyber-fieldset">
+                        <legend>Identity Verification</legend>
+                        
+                        <div class="input-group">
+                            <label for="name-input">Full Name</label>
+                            <input type="text" id="name-input" name="name" value="Saiyam Jain" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email-input">Email ID</label>
+                            <input type="email" id="email-input" name="email" value="saiyam.26bcs10794@sst.scaler.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="id-input">Student ID</label>
+                            <input type="text" id="id-input" name="student_id" value="16bcs10794" required>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="cyber-fieldset">
+                        <legend>Elective Course Selection</legend>
+                        <div class="input-group">
+                            <label for="course-select">Choose Module</label>
+                            <select id="course-select" name="course">
+                                <option value="" disabled selected>-- Select Specialized Track --</option>
+                                <option value="advanced-java">Advanced Backend with Spring Boot</option>
+                                <option value="fullstack">Full Stack React & Node</option>
+                                <option value="ai-ml">Machine Learning Fundamentals</option>
+                                <option value="advanced-dsa">Competitive Programming & DSA</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="cyber-fieldset">
+                        <legend>Delivery Format</legend>
+                        <div class="choice-container">
+                            <div class="choice-item">
+                                <input type="radio" id="mode-virtual" name="learning_mode" value="online">
+                                <label for="mode-virtual">Virtual Stream</label>
+                            </div>
+                            <div class="choice-item">
+                                <input type="radio" id="mode-campus" name="learning_mode" value="offline" checked>
+                                <label for="mode-campus">On-Campus Studio</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="cyber-fieldset">
+                        <legend>Prerequisite Proficiencies</legend>
+                        <div class="choice-container">
+                            <div class="choice-item">
+                                <input type="checkbox" id="chk-java" name="skills" value="java" checked>
+                                <label for="chk-java">Java</label>
+                            </div>
+                            <div class="choice-item">
+                                <input type="checkbox" id="chk-python" name="skills" value="python" checked>
+                                <label for="chk-python">Python</label>
+                            </div>
+                            <div class="choice-item">
+                                <input type="checkbox" id="chk-web" name="skills" value="web" checked>
+                                <label for="chk-web">HTML/CSS/JS</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-neon-cyan">Submit Enrolment</button>
+                        <button type="reset" class="btn-neon-purple">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Footer -->
+            <footer class="cyber-footer">
+                <p>&copy; 2026 Saiyam Jain &bull; Student Portal System Core</p>
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>

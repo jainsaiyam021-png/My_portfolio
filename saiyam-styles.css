@@ -1,0 +1,331 @@
+/* --- Cyber / Dark-Mode Theme Styles --- */
+:root {
+    --bg-deep: #0b0f19;
+    --bg-surface: #131c2e;
+    --bg-card: #1a253a;
+    --border-color: #2a3b5c;
+    --neon-cyan: #00f2fe;
+    --neon-purple: #9d4edd;
+    --text-primary: #e2e8f0;
+    --text-secondary: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-deep);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- App Layout (Sidebar + Main) --- */
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-surface);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.brand {
+    padding: 25px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.brand h2 {
+    margin: 0;
+    color: var(--neon-cyan);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.version {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    background: rgba(0, 242, 254, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.side-nav {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.side-nav a {
+    padding: 12px 25px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.side-nav a:hover, 
+.side-nav a.active {
+    color: var(--neon-cyan);
+    background-color: rgba(0, 242, 254, 0.05);
+    border-left-color: var(--neon-cyan);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+}
+
+.main-content {
+    margin-left: 260px;
+    flex: 1;
+    padding: 40px;
+    max-width: 900px;
+}
+
+/* --- Top Header Banner --- */
+.top-banner {
+    margin-bottom: 30px;
+}
+
+.top-banner h1 {
+    margin: 0 0 5px 0;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.top-banner p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+/* --- Cyber Cards --- */
+.cyber-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+/* --- Custom Highlights & Badges --- */
+.highlight-cyan {
+    color: var(--neon-cyan);
+    font-weight: bold;
+}
+
+.highlight-purple {
+    color: var(--neon-purple);
+    font-weight: bold;
+}
+
+.cyber-badge {
+    background: rgba(157, 78, 221, 0.15);
+    color: #e0aaff;
+    border: 1px solid var(--neon-purple);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+#student-name {
+    color: var(--neon-cyan);
+    font-weight: bold;
+}
+
+/* --- Tables --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+th {
+    background-color: rgba(0, 242, 254, 0.03);
+    color: var(--neon-cyan);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--neon-cyan);
+    font-family: monospace;
+}
+
+/* --- Lists --- */
+.neon-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.neon-list li {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid var(--neon-purple);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* --- Forms & Controls --- */
+.cyber-fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(11, 15, 25, 0.4);
+}
+
+.cyber-fieldset legend {
+    color: var(--neon-cyan);
+    font-weight: bold;
+    padding: 0 8px;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px 12px;
+    background-color: var(--bg-deep);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: var(--neon-cyan);
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 242, 254, 0.2);
+}
+
+.choice-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.choice-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.choice-item label {
+    margin-bottom: 0;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* --- Buttons --- */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.btn-neon-cyan {
+    background-color: var(--neon-cyan);
+    color: var(--bg-deep);
+}
+
+.btn-neon-cyan:hover {
+    opacity: 0.9;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.4);
+}
+
+.btn-neon-purple {
+    background-color: var(--bg-deep);
+    color: var(--neon-purple);
+    border: 1px solid var(--neon-purple);
+}
+
+.btn-neon-purple:hover {
+    background-color: rgba(157, 78, 221, 0.1);
+}
+
+/* --- Footer --- */
+.cyber-footer {
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
